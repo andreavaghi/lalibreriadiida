@@ -2,14 +2,19 @@
   "name": "lalibreriadiida",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run tailwind && npx eleventy --serve",
+    "tailwind": "postcss src/css/tailwind.css -o dist/css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "tailwindcss": "^1.7.6"
   }
 }
