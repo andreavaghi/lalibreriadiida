@@ -4,7 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npm run tailwind && npx eleventy --serve",
+    "start": "npm run tailwind && concurrently \"npm:tailwind -- --watch\" \"npx eleventy --serve\"",
     "tailwind": "postcss src/css/tailwind.css -o dist/css/style.css"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "autoprefixer": "^9.8.6",
+    "concurrently": "^5.3.0",
     "postcss-cli": "^7.1.2",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.7.6"
