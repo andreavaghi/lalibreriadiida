@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: initial-content
+local_backend: true
 publish_mode: editorial_workflow
 media_folder: "dist/images/uploads"
 public_folder: "/images/uploads"
@@ -12,5 +13,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Autore", name: "author", widget: "string"}
+      - {label: "Numero Pagine", name: "pages", widget: "number"}
+      - {label: "Casa Editrice", name: "publisher", widget: "string"}
+      - {label: "Contenuto pagina", name: "body", widget: "markdown"}
